@@ -270,3 +270,9 @@ git help
 git help -a
 
 ```
+
+# Create a Merge Request (Pull Request)
+
+For gitlab or github :
+
+Need to create a Merge request( also know as pull request)  from you local branch to master: you 'll need to use web interface of your git hosting platform like gitlab , github or bitbucket ...etc .
