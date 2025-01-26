@@ -25,14 +25,24 @@ Cloud Computing and Infrastructure ->>>>>
 Which cloud providers have you worked with, and how does DevOps relate to cloud services? ? ? 
 
 Discuss experience with AWS, and how cloud-based infrastructure integrates with automation and CI/CD tools in DevOps.
+Mentioned in aws_question.md file
 
 How do you manage infrastructure in the cloud? ? ? 
-Using tools like Terraform, AWS CloudFormation, or Azure Resource Manager, infrastructure can be defined as code, allowing for automation and scaling.
+Using tools like Terraform infrastructure can be defined as code, allowing for automation and scaling.
+
 Explain the concept of “immutable infrastructure”.
 Immutable infrastructure refers to the practice where servers or virtual machines are never modified after they are deployed; instead, they are replaced with new versions.
+
 What is the difference between IaaS, PaaS, and SaaS? ? ? 
 
 IaaS (Infrastructure as a Service) provides virtualized computing resources. PaaS (Platform as a Service) provides a platform for developing and deploying apps. SaaS (Software as a Service) delivers software applications over the internet.
+
+Saas : Example : Slack works as a SaaS (Software as a Service) application
+
+IaaS :  (Example: AWS EC2), You build and manage the infrastructure yourself
+
+PaaS: Example: AWS Elastic Beanstalk . AWS Elastic Beanstalk is a fully managed Platform-as-a-Service (PaaS) that enables developers to deploy and manage web applications and services in the cloud without having to manage the underlying infrastructure.
+
 How do you approach scaling applications in the cloud? ? ? 
 
 Discuss horizontal scaling (adding more instances) vs vertical scaling (upgrading the existing instance), and cloud features like auto-scaling in AWS or Azure.
