@@ -137,12 +137,19 @@ Remote Repository	Does not interact with the remote.	Interacts with the remote t
 Local Changes	Does not update your local branch with remote changes.	Updates your branch by merging remote changes.
 Branch Creation	Can create a new branch with -b or switch to an existing branch.	Does not create branches; only syncs changes.
 Combination with Remote	Typically used locally to manage branches or files.	Directly interacts with the remote repository.
+
+### 4. **Preserving Links, Images, and Tables**
+
+For links:
+```
 Example Workflow:
 Switch to a Branch:
-git checkout master
+git checkout master 
 Update the Branch with Remote Changes:
 git pull origin master
 Pulls the latest changes from the origin remote branch master and merges them into your local master.
+
+```
 Summary:
 Use git checkout to switch between branches or restore files.
 Use git pull to update your branch with the latest remote changes
@@ -207,10 +214,15 @@ If no upstream branch exists, Git will display an error:
 fatal: The current branch feature/new-feature has no upstream branch.
 To push the current branch and set the remote as upstream, use:
     git push --set-upstream origin feature/new-feature
-Key Differences
-Command	What It Does
-git push -u origin branch	Pushes the branch to the remote repository and sets it as the upstream for the local branch.
-git push	Pushes the current branch to the already-configured upstream branch (fails if no upstream exists).
+Key Differences in  Markdown format for .md files
+
+
+| **Command**                  | **What It Does**                                                                                   |
+|------------------------------|---------------------------------------------------------------------------------------------------|
+| `git push -u origin branch`   | Pushes the branch to the remote repository and sets it as the upstream for the local branch.       |
+| `git push`                    | Pushes the current branch to the already-configured upstream branch (fails if no upstream exists). |
+
+
 Why Use -u for the First Push?
 Simplifies Future Pushes:
 Once the upstream is set, you no longer need to specify the remote and branch every time.
@@ -220,5 +232,5 @@ The upstream tracking ensures that git pull and git push automatically operate o
 Summary
 Use git push -u origin feature/new-feature the first time you push a new branch to the remote.
 After that, use git push for subsequent updates to that branch.
-
+![git push error, when pushing code first time](git_push_error.png)
 ---
