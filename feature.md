@@ -243,3 +243,30 @@ Your branch is ahead of 'origin/initial-draft-of-changes' by 1 commit.
 
 nothing to commit, working tree clean
 ```
+# How to check branch name 
+```
+git branch
+
+Example output:
+
+* feature/new-feature
+  master
+  dev
+
+In this example, the current branch is feature/new-feature.
+
+You can use this command to directly retrieve the current branch name: Using git symbolic-ref (advanced):
+
+git symbolic-ref --short HEAD
+
+
+```
+
+# git help
+
+```
+git help
+
+git help -a
+
+```
