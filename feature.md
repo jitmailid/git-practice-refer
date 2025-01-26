@@ -233,4 +233,9 @@ Summary
 Use git push -u origin feature/new-feature the first time you push a new branch to the remote.
 After that, use git push for subsequent updates to that branch.
 ![git push error, when pushing code first time](git_push_error.png)
----
+# --
+If we have committed and not pushed to remote repo then like below we can see something here :
+``` Example of mesage in your local terminal
+Your branch is ahead of 'origin/initial-draft-of-changes' by 1 commit.
+  (use "git push" to publish your local commits)
+```
