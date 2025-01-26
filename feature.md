@@ -69,7 +69,7 @@ You can create a pull request to merge it into the master branch once the featur
  Ctrl + A for -> begining of line
  Ctrl + E for -> End of line  
 
-# What is feature branch ->>>>>>>->>>>>->>>>->>>>->>>>------>>>>--->>>>>--->>>>>
+# What is feature branch ->>>>>>>->>>>>->>>>->>>>->>>>------>>>>--->>>>>
 
 In Git, a branch name like feature/ is used as part of a branch naming convention that helps organize work and make repositories easier to manage. Here's why feature/ is commonly used:
 
@@ -161,3 +161,64 @@ After you commit, the changes from the staging area are saved into your local re
 
 
 
+# Difference Between git push -u origin feature/new-feature and git push --->>>>>
+1. git push -u origin feature/new-feature
+What it Does:
+
+Pushes a Branch to a Remote Repository:
+Pushes the current branch (in this case, feature/new-feature) to the remote repository named origin.
+Creates the branch on the remote repository if it doesn’t already exist.
+Sets the Upstream Tracking Branch:
+The -u or --set-upstream flag sets the upstream tracking branch for the local branch.
+This links your local branch (feature/new-feature) to the remote branch of the same name (or the one specified).
+After this, you can simply use git push or git pull without specifying the branch name.
+When to Use It:
+
+When you're pushing a branch for the first time to the remote repository.
+When you want to establish a tracking relationship between your local branch and a remote branch.
+Example Workflow:
+
+# Create a new branch and switch to it
+git checkout -b feature/new-feature
+
+# Make changes, stage, and commit
+git add .
+git commit -m "Implemented a new feature"
+
+# Push the branch and set upstream
+git push -u origin feature/new-feature
+After running this, your local feature/new-feature branch will be tracked by the remote feature/new-feature branch.
+Now you can use the simpler git push and git pull commands for this branch in the future.
+2. git push
+What it Does:
+
+Pushes the changes from the current branch to its upstream branch (if one is already set).
+It requires an upstream branch to already exist or be previously configured with git push -u.
+When to Use It:
+
+After the upstream branch has been set (e.g., with git push -u or via other commands).
+To push changes from your local branch to the remote branch without re-specifying the branch and remote.
+Example Workflow:
+
+Assuming the upstream branch is already set:
+git push
+This pushes the current branch to its corresponding remote branch.
+If no upstream branch exists, Git will display an error:
+fatal: The current branch feature/new-feature has no upstream branch.
+To push the current branch and set the remote as upstream, use:
+    git push --set-upstream origin feature/new-feature
+Key Differences
+Command	What It Does
+git push -u origin branch	Pushes the branch to the remote repository and sets it as the upstream for the local branch.
+git push	Pushes the current branch to the already-configured upstream branch (fails if no upstream exists).
+Why Use -u for the First Push?
+Simplifies Future Pushes:
+Once the upstream is set, you no longer need to specify the remote and branch every time.
+Instead of git push origin feature/new-feature, you can just use git push.
+Tracks Remote Branch Automatically:
+The upstream tracking ensures that git pull and git push automatically operate on the correct remote branch.
+Summary
+Use git push -u origin feature/new-feature the first time you push a new branch to the remote.
+After that, use git push for subsequent updates to that branch.
+
+---
