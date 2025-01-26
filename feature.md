@@ -276,3 +276,25 @@ git help -a
 For gitlab or github :
 
 Need to create a Merge request( also know as pull request)  from you local branch to master: you 'll need to use web interface of your git hosting platform like gitlab , github or bitbucket ...etc .
+
+# squashing commits
+
+```
+In GitHub, squashing commits in a pull request before merging to the master branch is a great way to keep your commit history clean and concise
+
+Squash Commits During the Merge (Using GitHub UI)
+GitHub provides an option to squash commits when you're merging the pull request.
+
+Once your pull request is ready to be merged, go to the Pull requests tab and find the pull request you created.
+Review the changes in the PR.
+When you click the Merge pull request button, you’ll see a small dropdown next to it with three merge options:
+Merge: Creates a merge commit, keeping all individual commits in the history.
+Squash and merge: Squashes all commits into one single commit and merges it.
+Rebase and merge: Rebases the commits and merges them.
+Select Squash and merge.
+After selecting Squash and merge, you’ll be prompted to:
+Edit the commit message (the default will usually include a summary of the PR's commits).
+Confirm the squash merge.
+Click Confirm squash and merge to complete the process.
+
+```
